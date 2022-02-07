@@ -30,14 +30,14 @@ while True:
 
         print(f'Вы ввели сумму {byn} и валюту {currency}')
         if currency == 'USD':
-            print(f'Конвертированная сумма в USD = {int(byn / 2.6)}')
+            print(f'Конвертированная сумма из BYN в USD = {int(byn / 2.6)}')
         elif currency == 'EUR':
-            print(f'Конвертированная сумма в EUR = {int(byn / 2.96)}')
+            print(f'Конвертированная сумма из BYN в EUR = {int(byn / 2.96)}')
         elif currency == 'CHF':
-            print(f'Конвертированная сумма в CHF = {int(byn / 2.8)}')
+            print(f'Конвертированная сумма из BYN в CHF = {int(byn / 2.8)}')
         elif currency == 'GBP':
-            print(f'Конвертированная сумма в GBP = {int(byn / 3.5)}')
+            print(f'Конвертированная сумма из BYN в GBP = {int(byn / 3.5)}')
         elif currency == 'CNY':
-            print(f'Конвертированная сумма в CNY = {int(byn / 0.4)}')
+            print(f'Конвертированная сумма из BYN в CNY = {int(byn / 0.4)}')
         else:
-            print(f'Мы не знаем курс конвертации в {currency}')
+            print(f'Мы не знаем курс конвертации BYN в {currency}')

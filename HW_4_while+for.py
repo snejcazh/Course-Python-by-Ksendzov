@@ -70,7 +70,7 @@ print('-------------------- 11 --------------------')
 #   11.3 Сделать if с условием, если item равен  10, то вывести в консоль (‘Item =’, item).
 #   11.4 Сделать if с условием, если item меньше 4, то вывести в консоль (‘Item <’, item).
 #   11.5 Сделать if с условием, если item больше или равно 27, то вывести в консоль (‘Item >=’, item).
-for item in range(0, 30):
+for item in range(0, 31):
     print('Step = ', item)
     if item == 5:
         print('Item =', item)
@@ -94,7 +94,7 @@ print('-------------------- 12 --------------------')
 # 		-- Вывести в консоль (‘-------- Inner_Step =’, inner_item)
 # 		-- Сделать if если inner_item равен 5, то в inner_count присвоить inner_item.
 # 	- За пределами тела предыдущего цикла вывести в консоль (‘-- inner_count =’, inner_count)
-for item in range(0, range_count + 1):
+for item in range(0, range_count + 2):
     print('Step =', item)
     if item == 7:
         inner_count = 0
@@ -116,7 +116,7 @@ print('-------------------- 13 --------------------')
 # 	    - В теле if поставить continue
 #
 #   13.3 Выйти з if. Вывести в консоль (‘End_iteration =’, item)
-for item in range(0, 20):
+for item in range(0, 21):
     print('Step =', item)
     if item > 7 and item < 12:
         print('If_item =', item)

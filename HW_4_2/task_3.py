@@ -31,8 +31,8 @@ else:
     byn = int(byn_str)
 
     print(f'Ты ввёл {byn} byn')
-    print(f'"Конвертированная сумма в USD = {int(byn / 2.6)}')
-    print(f'"Конвертированная сумма в EUR = {int(byn / 2.96)}')
-    print(f'"Конвертированная сумма в CHF = {int(byn / 2.8)}')
-    print(f'"Конвертированная сумма в GBP = {int(byn / 3.5)}')
-    print(f'"Конвертированная сумма в CNY = {int(byn / 0.4)}')
+    print(f'Конвертированная сумма в USD = {int(byn / 2.6)}')
+    print(f'Конвертированная сумма в EUR = {int(byn / 2.96)}')
+    print(f'Конвертированная сумма в CHF = {int(byn / 2.8)}')
+    print(f'Конвертированная сумма в GBP = {int(byn / 3.5)}')
+    print(f'Конвертированная сумма в CNY = {int(byn / 0.4)}')

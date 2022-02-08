@@ -1,18 +1,28 @@
 def user_update(user_emails, users_storage):
     user_for_update = input("Enter user's' email ")
-    item_for_update = input("Enter, which item needs to be updated: email, name, password or phone ")
+    if user_for_update in user_emails:
+        temp = "yes"
+        while temp == "yes":
+            item_for_update = input("Enter, which item needs to be updated: email, name, password or phone ")
 
-    if item_for_update == 'email':
-        update_email(user_for_update, user_emails, users_storage)
+            if item_for_update == 'email':
+                user_for_update = update_email(user_for_update, user_emails, users_storage)
 
-    elif item_for_update == 'name':
-        update_name(user_for_update, users_storage)
+            elif item_for_update == 'name':
+                update_name(user_for_update, users_storage)
 
-    elif item_for_update == 'password':
-        update_password(user_for_update, users_storage)
+            elif item_for_update == 'password':
+                update_password(user_for_update, users_storage)
 
-    elif item_for_update == 'phone':
-        update_phone(user_for_update, users_storage)
+            elif item_for_update == 'phone':
+                update_phone(user_for_update, users_storage)
+
+            else:
+                print("We don't know such action.")
+
+            temp = input("Do you want to update something else? Write 'yes' or 'no' ")
+    else:
+        print(f'User with email {user_for_update} is not in our database')
 
 
 def update_email(email, user_emails, users_storage):
@@ -22,6 +32,7 @@ def update_email(email, user_emails, users_storage):
     users_storage[new_email] = users_storage.pop(email)
 
     print(f'You updated email from {email} to {new_email}')
+    return new_email
 
 
 def update_name(email, users_storage):

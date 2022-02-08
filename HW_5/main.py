@@ -26,7 +26,7 @@ while True:
     if action == 'help':
         help_actions()
 
-    if action == 'create':
+    elif action == 'create':
         print('action = ', action)
 
         email = input('Email: ')
@@ -40,8 +40,8 @@ while True:
             create_user(email, name, password,
                         phone, user_emails, users_storage)
 
-            print('user_emails = ', user_emails)
-            print('users_storage = ', users_storage)
+#            print('user_emails = ', user_emails)
+#            print('users_storage = ', users_storage)
 
     elif action == 'read_all':
         print('action = ', action)
@@ -49,7 +49,7 @@ while True:
 
     elif action == 'read_user':
 
-        user_e = input('Enter user email')
+        user_e = input('Enter user email ')
         message = user_info(user_e, user_emails, users_storage)
 
         print('action = ', action)
@@ -62,6 +62,9 @@ while True:
     elif action == 'delete':
         print('action = ', action)
         user_delete(user_emails, users_storage)
+
+    else:
+        print("We don't know such action.")
 
 
 

@@ -20,48 +20,42 @@ from help_1 import  help_actions
 user_emails = []
 users_storage = {}
 
+print("Hello! To interact with our application, you can use the following commands: \n"
+      "create, read_user, read_all, update, delete, help (to view possible actions) or quit (to close the program). \n"
+      "For quick access you can enter the first letters of the commands: c, ru, ra, u, d, h, q.")
 while True:
-    action = input('Please enter action or help to view possible actions: ')
+    action = input('Please enter action: ')
 
-    if action == 'help':
+    if action == 'help' or action == 'h':
         help_actions()
 
-    elif action == 'create':
-        print('action = ', action)
+    elif action == 'create' or action == 'c':
+        print('action = create')
 
-        email = input('Email: ')
-        if email in user_emails:
-            print('This email is already in our database')
-        else:
-            name = input('Name: ')
-            password = input('Password: ')
-            phone = input('Phone: ')
+        create_user(user_emails, users_storage)
 
-            create_user(email, name, password,
-                        phone, user_emails, users_storage)
-
-#            print('user_emails = ', user_emails)
-#            print('users_storage = ', users_storage)
-
-    elif action == 'read_all':
-        print('action = ', action)
+    elif action == 'read_all' or action == 'ra':
+        print('action = read_all')
         all_users_info(users_storage)
 
-    elif action == 'read_user':
+    elif action == 'read_user' or action == 'ru':
 
         user_e = input('Enter user email ')
         message = user_info(user_e, user_emails, users_storage)
 
-        print('action = ', action)
+        print('action = read_user')
         print('User: ', message)
 
-    elif action == 'update':
-        print('action = ', action)
+    elif action == 'update' or action == 'u':
+        print('action = update')
         user_update(user_emails, users_storage)
 
-    elif action == 'delete':
-        print('action = ', action)
+    elif action == 'delete' or action == 'd':
+        print('action = delete')
         user_delete(user_emails, users_storage)
+
+    elif action == 'quit' or action == 'q':
+        break
 
     else:
         print("We don't know such action.")

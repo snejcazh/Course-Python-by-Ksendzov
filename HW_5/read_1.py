@@ -4,7 +4,7 @@ def user_info(email, user_emails, users_storage):
                   f'User_info: {users_storage[email]}'
 
     else:
-        message = 'No user with email: ', email
+        message = f'No user with email: {email}'
 
     return message
 

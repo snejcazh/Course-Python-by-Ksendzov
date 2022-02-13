@@ -1,6 +1,6 @@
 def user_info(email, user_emails, users_storage):
     if email in user_emails:
-        message = f'User_email = {email}, \n ' \
+        message = f'User_email = {email}, \n' \
                   f'User_info: {users_storage[email]}'
 
     else:

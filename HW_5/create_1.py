@@ -17,16 +17,16 @@ def create_user(user_emails, users_storage):
     if email in user_emails:
         print('This email is already in our database')
     else:
-        email_validate(email)
+        email = email_validate(email)
 
         name = input('Name: ')
-        name_validate(name)
+        name = name_validate(name)
 
         password = input('Password: ')
-        password_validate(password)
+        password = password_validate(password)
 
         phone = input('Phone: ')
-        phone_validate(phone)
+        phone = phone_validate(phone)
 
         user_info = [email, name, password, phone]
         user_emails.append(email)

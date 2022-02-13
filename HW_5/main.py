@@ -40,7 +40,7 @@ while True:
 
     elif action == 'read_user' or action == 'ru':
 
-        user_e = input('Enter user email ')
+        user_e = input('Enter user\'s email ')
         message = user_info(user_e, user_emails, users_storage)
 
         print('action = read_user')
